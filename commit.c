@@ -1,4 +1,3 @@
-consectetur
 adipiscing
 elit,
 sed
