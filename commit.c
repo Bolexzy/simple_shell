@@ -1,4 +1,3 @@
-sit
 amet,
 consectetur
 adipiscing
