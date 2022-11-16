@@ -1,4 +1,3 @@
-do
 eiusmod
 tempor
 incididunt
