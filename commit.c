@@ -1,4 +1,3 @@
-pariatur.
 Excepteur
 sint
 occaecat
