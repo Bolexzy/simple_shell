@@ -1,4 +1,3 @@
-dolor
 in
 reprehenderit
 in
