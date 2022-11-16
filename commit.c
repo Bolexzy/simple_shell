@@ -1,4 +1,3 @@
-sed
 do
 eiusmod
 tempor
