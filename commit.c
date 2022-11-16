@@ -1,4 +1,3 @@
-dolore
 eu
 fugiat
 nulla
