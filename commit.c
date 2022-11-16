@@ -1,4 +1,3 @@
-incididunt
 ut
 labore
 et
