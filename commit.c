@@ -1,4 +1,3 @@
-amet,
 consectetur
 adipiscing
 elit,
