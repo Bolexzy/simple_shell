@@ -1,4 +1,3 @@
-ad
 minim
 veniam,
 quis
