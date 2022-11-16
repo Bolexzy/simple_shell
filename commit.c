@@ -1,5 +1,3 @@
-ipsum
-dolor
 sit
 amet,
 consectetur
