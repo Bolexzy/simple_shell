@@ -1,4 +1,3 @@
-ut
 aliquip
 ex
 ea
