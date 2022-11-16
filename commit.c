@@ -1,4 +1,3 @@
-fugiat
 nulla
 pariatur.
 Excepteur
