@@ -1,4 +1,3 @@
-adipiscing
 elit,
 sed
 do
