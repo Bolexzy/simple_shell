@@ -1,4 +1,3 @@
-sint
 occaecat
 cupidatat
 non
