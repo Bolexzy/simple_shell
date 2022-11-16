@@ -1,4 +1,3 @@
-tempor
 incididunt
 ut
 labore
