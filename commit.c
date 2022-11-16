@@ -1,4 +1,3 @@
-minim
 veniam,
 quis
 nostrud
