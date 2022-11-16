@@ -1,4 +1,3 @@
-eiusmod
 tempor
 incididunt
 ut
