@@ -1,4 +1,3 @@
-Ut
 enim
 ad
 minim
