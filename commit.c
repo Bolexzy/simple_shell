@@ -1,4 +1,3 @@
-Excepteur
 sint
 occaecat
 cupidatat
