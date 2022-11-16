@@ -1,4 +1,3 @@
-eu
 fugiat
 nulla
 pariatur.
