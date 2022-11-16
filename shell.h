@@ -20,17 +20,27 @@ extern char **environ;
 #include <limits.h>
 #include <stdlib.h>
 
+/**
+ * struct node - A new struct type defining a linked list.
+ * @str: A directory path.
+ * @next: A pointer to another struct list_t.
+ */
 typedef struct node
 {
 	char *str;
 	struct node *next;
-}list_t;
+} list_t;
 
+/**
+ * struct builtins - A new struct type defining builtin commands.
+ * @name: The name of the builtin command.
+ * @f: A function pointer to the builtin command's function.
+ */
 typedef struct builtins
 {
 	char *name;
 	int (*f)(char **args);
-}builtin_t;
+} builtin_t;
 
 /* commands */
 int execute(char **args);
