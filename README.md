@@ -1,4 +1,4 @@
-# **lsh - Simple Shell 🐚 **
+# lsh - Simple Shell 🐚 
 
 This is a simple UNIX command interpreter written as part of the low-level programming and algorithm track at ALX Africa.
 
@@ -13,7 +13,7 @@ Usage: **lsh** [*filename*]
 To invoke **lsh**, compile all `.c` files in the repository and run the resulting executable:
 
 ```
-  gcc *.c -o shellby
+  gcc *.c -o lsh
   ./lsh
 ```
 
@@ -26,7 +26,7 @@ Example:
   $
   ```
   
-  If **lsh** is invoked with standard input connected to a terminal (determined by [isatty(3)])(https://linux.die.net/man/3/isatty), an interactive shell is opened. When executing interactively, **lsh** displays the prompt $ when it is ready to read a command.
+  If **lsh** is invoked with standard input connected to a terminal (determined by [isatty(3)](https://linux.die.net/man/3/isatty)), an interactive shell is opened. When executing interactively, **lsh** displays the prompt $ when it is ready to read a command.
   
   Example:
 ```
@@ -34,7 +34,7 @@ Example:
   $
   ```
   
-  If a command line argument is invoked, sodash will take that first argument as a file from which to read commands.
+  If a command line argument is invoked, **lsh** will take that first argument as a file from which to read commands.
 
 Example:
  ```
@@ -60,7 +60,7 @@ The home directory of the current user and the default directory argument for th
 ####  PWD
 The current working directory as set by the **cd** command.
  ```
-  $ echo "echo $PWD" | ./shellby
+  $ echo "echo $PWD" | ./lsh
   /home/vagrant/holberton/simple_shell
   ```
 
@@ -68,7 +68,7 @@ The current working directory as set by the **cd** command.
 
 The previous working directory as set by the **cd** command.
 ```
-  $ echo "echo $OLDPWD" | ./shellby
+  $ echo "echo $OLDPWD" | ./lsh
   /home/vagrant/holberton/printf
   ```
   
@@ -81,10 +81,10 @@ $ echo "echo $PATH" | ./lsh
 ```
 ### Command Execution 🔫
 
-After receiving a command, lsh tokenizes it into words using `" "` as a delimiter. The first word is considered the command and all remaining words are considered arguments to that command. sodash then proceeds with the following actions:
+After receiving a command, lsh tokenizes it into words using `" "` as a delimiter. The first word is considered the command and all remaining words are considered arguments to that command. **lsh** then proceeds with the following actions:
 
 If the first character of the command is neither a slash (`\`) nor dot (`.`), the shell searches for it in the list of shell builtins. If there exists a builtin by that name, the builtin is invoked.
-If the first character of the command is none of a slash (`\`), dot (`.`), nor builtin, sodash searches each element of the PATH environmental variable for a directory containing an executable file by that name.
+If the first character of the command is none of a slash (`\`), dot (`.`), nor builtin, **lsh** searches each element of the PATH environmental variable for a directory containing an executable file by that name.
 If the first character of the command is a slash (`\`) or dot (`.`) or either of the above searches was successful, the shell executes the named program with any remaining given arguments in a separate execution environment.
 
 ### Exit Status 👋
@@ -118,7 +118,7 @@ Example:
   /home/vagrant/holberton/simple_shell
   ```
   
-  ### $?
+  #### $?
 `?` is substitued with the return value of the last program executed.
 
 Example:
@@ -127,7 +127,7 @@ Example:
   0
 ```
 
-### $$
+#### $$
 The second `$` is substitued with the current process ID.
 
 Example:
@@ -148,7 +148,8 @@ Example:
 ### Operators 🎸
 **lsh** specially interprets the following operator characters:
 
-; - Command separator
+**; - Command separator**
+
 Commands separated by a `;` are executed sequentially.
 
 Example:
@@ -182,7 +183,8 @@ Example:
 The operators `&&` and `||` have equal precedence, followed by `;`.
 
 ### Lsh Builtin Commands 🔩
-**cd**
+
+#### cd
 
 - Usage: `cd [DIRECTORY]`
 - Changes the current directory of the process to `DIRECTORY`.
@@ -190,6 +192,7 @@ The operators `&&` and `||` have equal precedence, followed by `;`.
 - If the argument `-` is given, the command is interpreted as `cd $OLDPWD` and the pathname of the new working directory is printed to standad output.
 - If the argument, `--` is given, the command is interpreted as `cd $OLDPWD` but the pathname of the new working directory is not printed.
 - The environment variables `PWD` and `OLDPWD` are updated after a change of directory.
+
 Example:
 ```
   $ ./lsh
@@ -203,12 +206,13 @@ Example:
   /home/vagrant/holberton/simple_shell
 ```
 
-### alias
+#### alias
 - Usage: `alias [NAME[='VALUE'] ...]`
 - Handles aliases.
 - `alias`: Prints a list of all aliases, one per line, in the form `NAME='VALUE'`.
 - `alias NAME [NAME2 ...]`: Prints the aliases `NAME`, `NAME2`, etc. one per line, in the form `NAME='VALUE'`.
 - `alias NAME='VALUE' [...]`: Defines an alias for each `NAME` whose `VALUE` is given. If `name` is already an alias, its value is replaced with `VALUE`.
+
 Example:
 ```
   $ ./slsh
@@ -221,19 +225,21 @@ Example:
   builtin1.c  exits.c    list1.c               
 ```
 
-### exit
+#### exit
 - Usage: `exit [STATUS]`
 - Exits the shell.
 - The `STATUS` argument is the integer used to exit the shell.
 - If no argument is given, the command is interpreted as exit `0`.
+
 Example:
 ```
   $ ./lsh
   $ exit
   ```
- ### env
+ #### env
 - Usage: `env`
 - Prints the current environment.
+
 Example:
 ```
   $ ./lsh
@@ -241,7 +247,7 @@ Example:
 NVM_DIR=/home/vagrant/.nvm
 ...
 ```
-### setenv
+#### setenv
 - Usage: `setenv [VARIABLE] [VALUE]`
 - Initializes a new environment variable, or modifies an existing one.
 - Upon failure, prints a message to `stderr`.
@@ -254,7 +260,7 @@ Example:
   Poppy
   ```
   
-### unsetenv
+#### unsetenv
 - Usage: `unsetenv [VARIABLE]`
 - Removes an environmental variable.
 - Upon failure, prints a message to `stderr`.
@@ -269,13 +275,13 @@ Example:
   $
   ```
  
-### flowcart
+## flowchart
 
-### Authors ✒️
-- Boluwatife Oyewumi <[Bolexzy]()>
-- Brennan D Baraban <[bdbaraban]()>
+## Authors ✒️
+- Boluwatife Oyewumi <[Bolexzy](https://github.com/Bolexzy)>
+- Victory Amadi <[dr-victoire](https://github.com/dr-victoire)>
 
-Acknowledgements 🙏
+ ## Acknowledgements 🙏
 **Lsh** emulates basic functionality of the **sh** shell. This README borrows form the Linux man pages [sh(1)](https://linux.die.net/man/1/sh) and [dash(1)](https://linux.die.net/man/1/dash).
 
 This project was written as part of the curriculum for ALX-Holberton School. ALX Africa is a project-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this [link](https://www.alxafrica.com/alx-se-oct-2022-high-school?utm_source=google&utm_medium=youth-search&utm_campaign=18-24-se-youth-nigeria&gclid=Cj0KCQjwk5ibBhDqARIsACzmgLSTQeXelpWqV326kaO4CVdhyFJPnRjWYcIM43YQdQ5tcbhNFPEDqr8aAikkEALw_wcB).
