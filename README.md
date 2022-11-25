@@ -277,6 +277,10 @@ Example:
  
 ## flowchart
 
+A simple flowchart demonstarting the **Lsh** Simple Shell
+
+<img src="https://user-images.githubusercontent.com/74738413/203888651-35f14933-3b18-42bc-9030-853ea5bef0a2.jpg" alt="lsh shell" title="Lsh simple shell">
+
 ## Authors ✒️
 - Boluwatife Oyewumi <[Bolexzy](https://github.com/Bolexzy)>
 - Victory Amadi <[dr-victoire](https://github.com/dr-victoire)>
